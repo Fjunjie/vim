@@ -25,7 +25,7 @@
 #define index_to_key(i) ((i) ^ 15167)
 #define TEST_COUNT 50000
 
-static int testzero (int a){
+int relocate (int a){
     if (a == 0) return 1;
     return 0;
 }
