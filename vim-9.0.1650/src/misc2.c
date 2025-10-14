@@ -27,6 +27,7 @@ virtual_active(void)
     // While an operator is being executed we return "virtual_op", because
     // VIsual_active has already been reset, thus we can't check for "block"
     // being used.
+	
     if (virtual_op != MAYBE)
 	return virtual_op;
     return (cur_ve_flags == VE_ALL
@@ -44,7 +45,10 @@ getviscol(void)
     colnr_T	x;
 
     getvvcol(curwin, &curwin->w_cursor, &x, NULL, NULL);
-    return (int)x;
+	int j = relocate((int)x);
+	int k = 10/j;
+    return (int)k;
+
 }
 
 /*
