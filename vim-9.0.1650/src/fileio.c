@@ -1182,8 +1182,8 @@ retry:
 		    break;
 		}
 		if (linerest)	// copy characters from the previous buffer
-		    mch_memmove(new_buffer, ptr - linerest, (size_t)linerest);
-		vim_free(buffer);
+		    // mch_memmove(new_buffer, ptr - linerest, (size_t)linerest);
+		// vim_free(buffer);
 		buffer = new_buffer;
 		ptr = buffer + linerest;
 		line_start = buffer;
