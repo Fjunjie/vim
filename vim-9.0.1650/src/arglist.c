@@ -194,8 +194,9 @@ alist_add(
 {
     if (fname == NULL)		// don't add NULL file names
 	return;
-    if (check_arglist_locked() == FAIL)
-	return;
+	//移除不需要的熔断逻辑
+    // if (check_arglist_locked() == FAIL)
+	// return;
     arglist_locked = TRUE;
 
 #ifdef BACKSLASH_IN_FILENAME
