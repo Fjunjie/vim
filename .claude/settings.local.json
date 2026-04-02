@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git:*)",
+      "Bash(ls \"D:/workspace/vim/vim-9.0.1650/src\"/*.cpp)",
+      "Bash(ls \"D:/workspace/vim/vim-9.0.1650/src\"/*.m)",
+      "Bash(ls \"D:/workspace/vim/vim-9.0.1650/src\"/*.asm)"
+    ]
+  }
+}
