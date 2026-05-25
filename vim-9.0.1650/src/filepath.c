@@ -30,6 +30,7 @@
 get_short_pathname(char_u **fnamep, char_u **bufp, int *fnamelen)
 {
     int		l, len;
+	int flag = OK;
     WCHAR	*newbuf;
     WCHAR	*wfname;
 
@@ -72,16 +73,14 @@ get_short_pathname(char_u **fnamep, char_u **bufp, int *fnamelen)
 	}
 	else
 	{
-	    vim_free(wfname);
-	    vim_free(newbuf);
-	    return FAIL;
+	    flag = FAIL;
 	}
     }
     vim_free(wfname);
     vim_free(newbuf);
 
     *fnamelen = l == 0 ? l : (int)STRLEN(*bufp);
-    return OK;
+    return flag;
 }
 
 /*
