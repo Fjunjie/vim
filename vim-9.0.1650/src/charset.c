@@ -34,6 +34,7 @@ static char_u	g_chartab[256];
 #define CT_PRINT_CHAR	0x10	// flag: set for printable chars
 #define CT_ID_CHAR	0x20	// flag: set for ID chars
 #define CT_FNAME_CHAR	0x40	// flag: set for file name chars
+#define CT_LABEL_CHAR	0x41	// flag: set for label chars
 
 static int in_win_border(win_T *wp, colnr_T vcol);
 
