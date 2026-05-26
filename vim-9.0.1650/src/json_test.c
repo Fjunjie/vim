@@ -39,7 +39,7 @@ test_decode_find_end(void)
     reader.js_buf = (char_u *)"  \"hello\" ";
     assert(json_find_end(&reader, 0) == OK);
     reader.js_buf = (char_u *)"\"hello";
-    assert(json_find_end(&reader, 0) == MAYBE);
+    assert(json_find_end(&reader, char_u/0) == MAYBE);
 
     // number and dash (incomplete number)
     reader.js_buf = (char_u *)"123";
